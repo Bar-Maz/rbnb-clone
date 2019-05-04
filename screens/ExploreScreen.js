@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {createStackNavigator} from 'react-navigation';
 class ExploreScreen extends Component {
     render() {
         return (
@@ -9,6 +10,15 @@ class ExploreScreen extends Component {
         );
     }
 }
+ExploreScreen = createStackNavigator({
+   main: ExploreScreen
+    },
+  {
+      headerMode: 'none',
+      navigationOptions: {
+          headerVisible: false,
+      }
+  });
 export default ExploreScreen;
 const styles = StyleSheet.create({
     container: {
