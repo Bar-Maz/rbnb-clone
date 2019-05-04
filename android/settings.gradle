@@ -1,0 +1,3 @@
+rootProject.name = 'rbnbclone'
+
+include ':app'
