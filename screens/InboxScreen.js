@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {createStackNavigator} from "react-navigation";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
 class InboxScreen extends Component {
   render() {
@@ -19,6 +20,13 @@ export default InboxScreen = createStackNavigator({
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
+      tabBarLabel: 'INBOX',
+      tabBarIcon: ({ tintColor }) => (
+        <FontAwesome5 name = "envelope"
+                      color = {tintColor}
+                      size = {24}
+                      solid/>
+      ),
     }
   });
 const styles = StyleSheet.create({
