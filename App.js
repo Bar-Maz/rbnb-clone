@@ -16,7 +16,7 @@ export default createAppContainer(createBottomTabNavigator({
     style: {
       backgroundColor: 'white',
       borderTopWidth: 0,
-      shadowStyle: {width: 5, height: 3},
+      shadowOffset: {width: 5, height: 3},
       shadowColor: 'grey',
       shadowOpacity: '0.7',
       elevation: 5,
