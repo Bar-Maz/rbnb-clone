@@ -54,17 +54,21 @@ class ExploreScreen extends Component {
             }}>
               <Text style={{
                 fontSize: 24, fontWeight: '700',
-                paddingHorizontal: 20
+                paddingHorizontal: 20, color: 'black'
               }}>
                 What can we help you find?
               </Text>
-              <View style={{height: 140, marginTop: 15,}}>
+              <View style={{height: 140, marginTop: 15}}>
                 <ScrollView
                   horizontal={true}
-                  showsHorizontalScrollIndicator={false}>
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={{
+                    paddingRight: 20
+                  }}
+                  >
                   <Category image={require('../assets/home.jpg')} title={'Home'}/>
                   <Category image={require('../assets/bike.jpg')} title={'Experiences'}/>
-                  <Category image={require('../assets/restaurant.jpg')} title={'Restaurant'}/>
+                  <Category image={require('../assets/restaurant.jpg')} title={'Restaurant'} style={{marginEnd: 20}}/>
                 </ScrollView>
               </View>
             </View>
