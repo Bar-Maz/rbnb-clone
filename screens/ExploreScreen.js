@@ -60,7 +60,8 @@ class ExploreScreen extends Component {
               </Text>
               <View style={{height: 140, marginTop: 15,}}>
                 <ScrollView
-                  horizontal={true}>
+                  horizontal={true}
+                  showsHorizontalScrollIndicator={false}>
                   <Category image={require('../assets/home.jpg')} title={'Home'}/>
                   <Category image={require('../assets/bike.jpg')} title={'Experiences'}/>
                   <Category image={require('../assets/restaurant.jpg')} title={'Restaurant'}/>
