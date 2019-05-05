@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import {Text, View, StatusBar, Platform, SafeAreaView, TextInput, ScrollView} from 'react-native';
+import {Text, Image, Dimensions, View, StatusBar, Platform, SafeAreaView, TextInput, ScrollView} from 'react-native';
 import {createStackNavigator} from 'react-navigation';
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import Category from "../components/Explore/Category";
+
+const {height, width} = Dimensions.get('window');
 
 class ExploreScreen extends Component {
   componentWillMount(): void {
@@ -65,14 +67,40 @@ class ExploreScreen extends Component {
                   contentContainerStyle={{
                     paddingRight: 20
                   }}
-                  >
+                >
                   <Category image={require('../assets/home.jpg')} title={'Home'}/>
                   <Category image={require('../assets/bike.jpg')} title={'Experiences'}/>
                   <Category image={require('../assets/restaurant.jpg')} title={'Restaurant'} style={{marginEnd: 20}}/>
                 </ScrollView>
               </View>
+              <View style={{marginTop: 40,}}>
+                <Text style={{
+                  fontSize: 24, fontWeight: '700',
+                  paddingHorizontal: 20, color: 'black'
+                }}>
+                  Introducing Airbnb Plus
+                </Text>
+                <Text style={{
+                  marginTop: 10, fontWeight: '100',
+                  paddingHorizontal: 20
+                }}>
+                  A brief, nicely written description of
+                  Airbnb plus that should be here.
+                </Text>
+                <View style={{
+                  width: width - 40,
+                  height: 240,
+                  marginTop: 20,
+                  alignSelf: 'center'
+                }}>
+                  <Image source={require('../assets/home2.jpg')}
+                  style={{
+                    flex:1, height: null, width: null, resizeMode: 'cover',
+                    borderRadius: 5, borderWidth: 1, borderColor: '#ddd'
+                  }}/>
+                </View>
+              </View>
             </View>
-
           </ScrollView>
         </View>
       </SafeAreaView>
