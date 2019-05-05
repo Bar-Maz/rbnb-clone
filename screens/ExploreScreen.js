@@ -49,6 +49,9 @@ class ExploreScreen extends Component {
             </View>
           </View>
           <ScrollView
+            contentContainerStyle={{
+              paddingBottom: 20
+            }}
             scrollEventThrottle={16}>
             <View style={{
               flex: 1, backgroundColor: 'white',
